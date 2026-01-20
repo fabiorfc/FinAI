@@ -21,4 +21,6 @@ class TimeSeriesBuilder:
         return self
 
     def get(self):
+        self.df.reset_index(inplace=True, names='Date')
+        self.df['Date'] = pd.to_datetime(self.df['Date'])
         return self.df
