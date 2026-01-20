@@ -52,7 +52,7 @@ def main():
     # WRITE CSV
     # ---------------------------------------------------------------
     output_file = processed_data_path / "holdings_timeseries.csv"
-    df_time_series.to_csv(output_file)
+    df_time_series.to_csv(output_file, index=False)
 
 
 

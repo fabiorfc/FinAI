@@ -10,7 +10,7 @@ from finai.extractors import ExtractAssets
 project_root = Path(__file__).resolve().parents[1]
 
 processed_data_path = project_root / "data" / "processed"
-output_path = project_root / "data" / "assets"
+output_path = project_root / "data" / "raw"
 
 # ---------------------------------------------------------------
 # LOAD DATA
