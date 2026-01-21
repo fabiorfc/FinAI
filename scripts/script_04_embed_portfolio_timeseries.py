@@ -10,9 +10,9 @@ from finai.processing import TransactionsProcessor, TimeSeriesBuilder, Portfolio
 # DEFINE PATHS
 # ---------------------------------------------------------------
 project_root = Path(__file__).resolve().parents[1]
-assets_path = project_root / "data" / "assets"
+assets_path = project_root / "data" / "raw"
 portfolio_path = project_root / "data" / "processed"
-
+output_path = project_root / "data" / "assets"
 
 # ---------------------------------------------------------------
 # READ FILES
@@ -33,7 +33,7 @@ get_portfolio_adjclose = (
     .portfolio_valuation(col_value = 'adjclose')
 )
 
-output = assets_path / "assets_adlclose.csv"
-get_portfolio_adjclose.to_csv(output)
+
+get_portfolio_adjclose.to_csv(output_path / "portfolio_assets_adjclose.csv")
 
 
